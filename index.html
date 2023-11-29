@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="./assets/img/avatar-icon.svg"/>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+</head>
+<body>
+    <!-- header -->
+    <header class="cabecalho">
+        <a href="#" class="logo">CaioS. <span class="animacao" style="--i:1"></span></a>
+
+        <input type="checkbox" id="menu" class="menu">
+        <label for="menu" class="menu-icon">
+            <i class='bx bx-menu'></i>
+            <span class="animacao" style="--i:1"></span>
+        </label>
+        
+        <nav class="cabecalho__navegacao">
+            <a href="#home" class="ativo" id="sectionId">Home</a>
+            <a href="#about" id="sectionId">Sobre mim</a>
+            <a href="#project" id="sectionId">Projetos</a>
+            <a href="#certification" id="sectionId">Certificações</a>
+            <a href="#skills" id="sectionId">Habilidades</a>
+            <a href="#contato" id="sectionId" class="cabecalho-contato">Contato</a>
+
+            <span class="animacao" style="--i:2"></span>
+        </nav>
+    </header>
+    
+    <!-- section HOME -->
+    <section class="home show-animacao" id="home">
+        <div class="home__conteudo">
+            <h1 class="home__titulo">Olá, eu sou <span>Caio Santos</span><span class="animacao" style="--i:1"></span></h1>
+            <div class="texto-animado">
+                <h3 class="home__subtitulo">Desenvolvedor Front-end</h3>
+                <span class="animacao" style="--i:2"></span>
+            </div>
+            <p>Bem-vindo ao meu portfolio! Sou um desenvolvedor front-end iniciante apaixonado por criar interfaces web incríveis e funcionais. Explore meus projetos e acompanhe minha jornada de aprendizado neste mundo fascinante da programação web.
+                <span class="animacao" style="--i:4"></span>
+            </p>
+            <div class="home__redes">
+                <a href="https://www.linkedin.com/in/caioh-santos/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/caioosantos" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/caaiiio_/" target="_blank"><i class='bx bxl-instagram' ></i></a>
+
+                <span class="animacao-redes" style="--i:5;"></span>
+            </div>
+        </div>
+        <div class="home__avatar">
+            <img src="./assets/img/avatar.svg" alt="Avatar representando Caio Santos" class="avatar">
+            <span class="animacao" style="--i:4"></span>
+        </div>
+    </section>
+
+    <!-- section SOBRE MIM -->
+    <section class="about" id="about">
+        <div class="about__conteudo">
+            <h1 class="titulo">Sobre Mim</h1>
+            <div class="about__me">
+                <img src="./assets/img/perfil.svg" alt="Foto de Caio Santos" class="imgPerfil">
+                <p class="about__texto">Olá, sou Caio, um jovem de 24 anos com uma paixão pelo desenvolvimento front-end. Minha jornada começou recentemente, mas estou empenhado em aprender e crescer constantemente. Adoro desafios e estou sempre buscando novas maneiras de aprimorar minhas habilidades e criar experiências incríveis para os usuários. Sou uma pessoa que tem como prioridade a organização e a qualidade, possuo facilidade para trabalhar em equipe e executo todas minhas tarefas com foco e empenho.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- section PROJETOS -->
+    <section class="project" id="project">
+        <div class="project__conteudo">
+            <h1 class="titulo">PROJETOS</h1>
+            <div class="project__conteudo__container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="detalhe-projeto">
+                            <h1>Landing Page: AluraBooks</h1>
+                        </div>
+                        <a href="https://caioosantos.github.io/alurabooks/" target="_blank">
+                            <div class="project__card alurabooks"></div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="detalhe-projeto">
+                            <h1>Página de Login e Cadastro</h1>
+                        </div>
+                        <a href="https://login-singup.vercel.app/#" target="_blank">
+                            <div class="project__card login"></div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="detalhe-projeto">
+                            <h1>Landing Page: The Coffee Bar</h1>
+                        </div>
+                        <a href="https://caioosantos.github.io/thecoffeebar/" target="_blank">
+                            <div class="project__card thecoffeebar"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section CERTIFICAÇÕES -->
+    <section class="certification" id="certification">
+        <div class="certification__conteudo">
+            <h1 class="titulo">CERTIFICAÇÕES</h1>
+            <div class="card__container">
+                <div class="card">
+                    <h2>A partir do zero: HTML e CSS para projetos web</h2>
+                    <div class="card__detalhes">
+                        <div class="card__descricao">
+                            <p>Instituição: <span>Alura</span></p>
+                            <p>Duração: <span>48 horas</span></p>
+                            <p>Conclusão: <span>2023</span></p>
+                            <p><span><a href="https://cursos.alura.com.br/degree/certificate/5d7e76e2-0775-43a1-b950-80db82637820" target="_blank">Certificado</a></span></p>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <span>&#8673;</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>JavaScript: manipulando o DOM</h2>
+                    <div class="card__detalhes">
+                        <div class="card__descricao">
+                            <p>Instituição: <span>Alura</span></p>
+                            <p>Duração: <span>6 horas</span></p>
+                            <p>Conclusão: <span>2023</span></p>
+                            <p><span><a href="https://cursos.alura.com.br/certificate/ba89a071-e1ca-4fb1-8128-a252d8a3bcc9" target="_blank">Certificado</a></span></p>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <span>&#8673;</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>JavaScript para Web: Crie páginas dinâmicas</h2>
+                    <div class="card__detalhes">
+                        <div class="card__descricao">
+                            <p>Instituição: <span>Alura</span></p>
+                            <p>Duração: <span>10 horas</span></p>
+                            <p>Conclusão: <span>2023</span></p>
+                            <p><span><a href="https://cursos.alura.com.br/certificate/b50237a2-7ec7-4b82-b9d6-fcfe6e9a679d" target="_blank">Certificado</a></span></p>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <span>&#8673;</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>JavaScript e TypeScript do básico ao avançado </h2>
+                    <div class="card__detalhes">
+                        <div class="card__descricao">
+                            <p>Instituição: <span>Udemy</span></p>
+                            <p>Duração: <span>164 horas</span></p>
+                            <p>Conclusão: <span>Curso em andamento</span></p>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <span>&#8673;</span>
+                    </div>
+                </div>    
+            </div>
+
+            <!-- responsive carrossel -->
+            <div class="card__container__responsive">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card__descricao">
+                            <h2>A partir do zero: HTML e CSS para projetos web</h2>
+                            <p>Instituição: <span>Alura</span></p>
+                            <p>Duração: <span>48 horas</span></p>
+                            <p>Conclusão: <span>2023</span></p>
+                            <p><span><a href="https://cursos.alura.com.br/degree/certificate/5d7e76e2-0775-43a1-b950-80db82637820" target="_blank">Certificado</a></span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card__descricao">
+                            <h2>JavaScript para Web: Crie páginas dinâmicas</h2>
+                            <p>Instituição: <span>Alura</span></p>
+                            <p>Duração: <span>10 horas</span></p>
+                            <p>Conclusão: <span>2023</span></p>
+                            <p><span><a href="https://cursos.alura.com.br/certificate/b50237a2-7ec7-4b82-b9d6-fcfe6e9a679d" target="_blank">Certificado</a></span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card__descricao">
+                            <h2>JavaScript: manipulando o DOM</h2>
+                            <p>Instituição: <span>Alura</span></p>
+                            <p>Duração: <span>6 horas</span></p>
+                            <p>Conclusão: <span>2023</span></p>
+                            <p><span><a href="https://cursos.alura.com.br/certificate/ba89a071-e1ca-4fb1-8128-a252d8a3bcc9" target="_blank">Certificado</a></span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card__descricao">
+                            <h2>JavaScript e TypeScript do básico ao avançado </h2>
+                            <p>Instituição: <span>Udemy</span></p>
+                            <p>Duração: <span>164 horas</span></p>
+                            <p>Conclusão: <span>Curso em andamento</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- section HABILIDADES -->
+    <section class="skills" id="skills">
+        <div class="skills__conteudo">
+            <h1 class="titulo">HABILIDADES</h1>
+            <div class="skills__icons">
+                <i class='bx bxl-html5'></i>                
+                <i class='bx bxl-css3'></i>                
+                <i class='bx bxl-javascript'></i>
+                <i class='bx bxl-react'></i>                
+                <i class='bx bxl-github'></i>
+            </div>
+            <div class="skills__descricao">
+                <span>
+                    /* DESCRIÇÃO
+                    <p class="skills__texto"></p>
+                    */
+                </span>      
+            </div>
+
+            <!-- responsive -->
+            <div class="skills__descricao__responsive">
+                <div class="skills__responsive">
+                    <i class='bx bxl-html5'></i>
+                    <p><span>HTML5 (Hypertext Markup Language)<br></span> É uma das primeiras e principais linguagens de marcação padrão para páginas da web. O HTML serve para o desenvolvimento de páginas que contenham conteúdos simples, como textos, imagens, áudio, vídeos, entre outras coisas.</p>
+                </div>
+                <div class="skills__responsive">
+                    <i class='bx bxl-css3'></i>
+                    <p><span>CSS3 (Cascading Style Sheets) <br></span>É uma linguagem de estilo que descreve a apresentação de um documento HTML.</p>  
+                </div>
+                <div class="skills__responsive">
+                    <i class='bx bxl-javascript'></i>
+                    <p><span>JavaScript <br></span> É uma linguagem de programação de alto nível, interpretada e dinâmica, que é amplamente utilizada na web para adicionar interatividade e funcionalidades avançadas às páginas da web.</p>
+                </div>
+                <div class="skills__responsive">
+                    <i class='bx bxl-react'></i>
+                    <p><span>React <br></span> É uma biblioteca de JavaScript utilizada para construir interfaces de usuário interativas e eficientes. Desenvolvido e mantido pelo Facebook, o React permite que os desenvolvedores construam aplicativos da web de uma maneira declarativa e componentizada. </p>
+                </div>
+                <div class="skills__responsive">
+                    <i class='bx bxl-github'></i>
+                    <p><span>GitHub <br></span> É uma plataforma de controle de versões gratuita que serve para gerir projetos e permite a colaboração entre uma grande comunidade de desenvolvedores, contribuindo com melhorias e comentários.</p>
+                </div>
+            </div> 
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="rodape" id="contato">
+        <h2 class="rodade__titulo">Feito por Caio Santos</h2>
+        <div class="rodade__container">
+            <div class="texto-rodape">
+                <p>Email: caiohbsantos@hotmail.com</p>
+                <p>Imagem do Avatar: bitmoji</p>
+            </div>
+            <div class="rodape__link">
+                <a href="https://www.linkedin.com/in/caioh-santos/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/caioosantos" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/caaiiio_/" target="_blank"><i class='bx bxl-instagram' ></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
+

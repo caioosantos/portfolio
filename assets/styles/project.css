@@ -1,0 +1,103 @@
+.project {
+    background: transparent;
+}
+
+.project__conteudo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.project__conteudo__container {
+    width: 50%;
+    height: 400px;
+}
+
+.project__conteudo {
+    overflow: hidden;
+}
+
+.project__conteudo__container .swiper-slide {
+    background: linear-gradient(var(--primary-bg-color), var(--primary-bg-color), var(--primary-bg-color), var(--second-bg-color), rgb(51, 152, 219, .6));
+    border-radius: 10px;
+}
+
+.detalhe-projeto {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10px;
+    color: var(--main-color);
+}
+
+.project__card {
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    opacity: .7;
+}
+
+.login {
+    background: url('../img/login.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.alurabooks {
+    background: url('../img/alurabooks.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+.thecoffeebar {
+    background: url('../img/thecoffeebar.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 1600px) {
+    .project__conteudo__container {
+        width: 60%;
+        height: 450px;
+    }
+}
+
+@media (max-width: 1366px) {  
+
+}
+
+@media (max-width:1024px) {
+    .project__conteudo__container {
+        width: 70%;
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project__conteudo__container {
+        width: 80%;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+
+    .project__conteudo__container .swiper-pagination {
+        position: relative;
+        margin-top: 12px;
+    }
+
+    .detalhe-projeto {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,226 @@
+.skills__conteudo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.skills__icons {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills__icons i {
+    display: flex;
+    font-size: 120px;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    border-radius: 20%;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.skills__icons:not(:last-child) {
+    margin-right: 10px;
+}
+
+.skills__icons:hover > :not(:hover) {
+    opacity: 0.2;
+}
+
+.skills__icons .bxl-html5:hover {
+    background: linear-gradient(to right, #e44f26 50%, #f26529 50%);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    border-color: #e44f26;
+}
+
+.skills__icons .bxl-css3:hover {
+    background: linear-gradient(to right, #1572b6 50%, #2aa9e0 50%);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    border-color: #1572b6;
+}
+
+.skills__icons .bxl-javascript:hover {
+    color: #f7e018;
+    border-color: #f7e018;
+}
+
+.skills__icons .bxl-react:hover {
+    color: #61DBFB;
+    border-color: #61DBFB;
+}
+
+.skills__icons .bxl-github:hover {
+    color: black;
+    border-color: black;
+}
+
+.skills__descricao {
+    position: relative;
+    width: 50%;
+    margin-top: 50px;
+    right: 5px;
+    background-color: #333;
+    color: #a6e22e;
+    font-family: 'Courier New', monospace;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    min-height: 240px;
+}
+
+.skills__descricao::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #555;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.skills__texto {
+    text-wrap: wrap;
+    margin: 25px;
+    text-align: justify;
+}
+
+.skills__descricao__responsive {
+    display: none;
+}
+
+@media (max-width: 1600px) {
+    .skills__icons,
+    .skills__descricao{
+        width: 60%;
+    }
+}
+
+@media (max-width:1366px) {
+    .skills__icons,
+    .skills__descricao{
+        width: 70%;
+    }
+
+    .skills__conteudo i {
+        font-size: 10.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .skills__conteudo i {
+        font-size: 9rem;
+    }
+
+    .skills__icons,
+    .skills__descricao {
+        width: 80%;
+    }
+
+    
+}
+
+@media (max-width: 768px) {
+    .skills__icons,
+    .skills__descricao {
+        display: none;
+    }
+
+    .skills__descricao__responsive {
+        display: block;
+    }
+
+    .skills__responsive {
+        display: flex;
+        justify-content: space-between center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .skills__responsive p {
+        font-size: 1.2rem;
+        color: var(--text-color);
+    }
+
+    .skills__responsive span {
+        color: var(--main-color);
+    }
+
+    .skills__responsive  .bxl-html5 {
+        background: linear-gradient(to right, #e44f26 50%, #f26529 50%);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    .skills__responsive .bxl-css3 {
+        background: linear-gradient(to right, #1572b6 50%, #2aa9e0 50%);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    
+    .skills__responsive .bxl-javascript {
+        color: #f7e018;     
+    }
+
+    .skills__responsive .bxl-react {
+        color: #61DBFB;
+    }
+    
+    .skills__responsive .bxl-github {
+        color: black;
+    }
+
+    .skills__responsive:nth-child(1) {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        transition-delay: .3s;
+    }
+
+    .skills__responsive:nth-child(2) {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        transition-delay: .6s;
+    }
+
+    .skills__responsive:nth-child(3) {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        transition-delay: .9s;
+    }
+
+    .skills__responsive:nth-child(4) {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        transition-delay: 1.2s;
+    }
+
+    .skills__responsive:nth-child(5) {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        transition-delay: 1.5s;
+    }
+}
+
+@media (max-width: 375px) {
+    .skills__responsive {
+        flex-direction: column;
+    }
+
+    .skills__responsive p {
+        text-align: center;
+    }
+
+    .skills__responsive span {
+        font-size: 1.4rem;
+    }
+}
