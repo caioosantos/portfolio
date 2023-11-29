@@ -224,13 +224,13 @@ section {
         display: block;
     }
 
-
     .cabecalho__navegacao {
         display: none;
         position: absolute;
         top: 60px;
         right: 10%;
         backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         width: 200px;
         padding: 10px 10px;
         z-index: 1;
