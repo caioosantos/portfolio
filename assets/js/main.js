@@ -38,32 +38,43 @@ document.addEventListener('DOMContentLoaded', function () {
     const links = document.querySelectorAll('#sectionId');
     
     links.forEach(link => {
-      link.addEventListener('click', function (event) {
-        event.preventDefault();
-        
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        
-        if (targetSection) {
-            if (window.innerWidth <= 768 && targetId === 'about' || targetId === 'skills') {
-                const targetTop = targetSection.offsetTop;
-                const navHeight = document.querySelector('.cabecalho').clientHeight;
-                window.scrollTo({
-                    top: targetTop - navHeight + 0.5,
-                    behavior: 'smooth'
-                });
-            } else {
-                const windowHeight = window.innerHeight;
-                const sectionHeight = targetSection.clientHeight;
-                const offset = (windowHeight - sectionHeight) / 2;
-                const targetTop = targetSection.offsetTop - offset;
-                window.scrollTo({
-                    top: targetSection.offsetTop - offset,
-                    behavior: 'smooth',
-                });
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                if (window.innerWidth <= 768 && targetId === 'about' || targetId === 'skills') {
+                    const targetTop = targetSection.offsetTop;
+                    const navHeight = document.querySelector('.cabecalho').clientHeight;
+                    window.scrollTo({
+                        top: targetTop - navHeight + 0.5,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    const windowHeight = window.innerHeight;
+                    const sectionHeight = targetSection.clientHeight;
+                    const offset = (windowHeight - sectionHeight) / 2;
+                    const targetTop = targetSection.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetSection.offsetTop - offset,
+                        behavior: 'smooth',
+                    });
+                }
             }
-        }
-      });
+
+            if (targetSection) {
+                if (window.innerWidth <= 800 && window.innerHeight <= 400) {
+                    const targetTop = targetSection.offsetTop;
+                    const navHeight = document.querySelector('.cabecalho').clientHeight;
+                    window.scrollTo({
+                        top: targetTop - navHeight + 1,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
     });
 
     let sections = document.querySelectorAll('section');
@@ -83,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     });
                 }
             }
-            else {
+            else if (window.innerHeight > 400) {
                 sec.classList.remove('show-animacao');
             }
         });

@@ -250,3 +250,14 @@
         width: 150px;
     }
 }
+
+@media (max-width: 800px) and (max-height: 400px) {
+    .home {
+        height: auto;
+        margin-top: 8%;
+    }
+
+    .avatar {
+        width: 35%;
+    }
+}

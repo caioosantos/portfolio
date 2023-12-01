@@ -101,3 +101,14 @@
         visibility: hidden;
     }
 }
+
+@media (max-width: 800px) and (max-height: 400px) {
+    .project__conteudo__container {
+        width: 50%;
+        height: 50vh;
+    }
+
+    .detalhe-projeto {
+        margin-top: 0;
+    }
+}
