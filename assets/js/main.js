@@ -21,138 +21,130 @@ skills.forEach((elemento, index) => {
             currentIndex++;
 
             if (currentIndex === texto.length) {
-            clearInterval(intervalo);
+                clearInterval(intervalo);
             }
         }, 50);
     });
 
 
     elemento.addEventListener('mouseout', () => {
-      clearInterval(intervalo);
-      descricao.innerHTML = '';
+        clearInterval(intervalo);
+        descricao.innerHTML = '';
     });
 });
 
 // section window
-document.addEventListener('DOMContentLoaded', function () {
-    const links = document.querySelectorAll('#sectionId');
-    
-    links.forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            
-            if (targetSection) {
-                if (window.innerWidth <= 768 && targetId === 'about' || targetId === 'skills') {
-                    const targetTop = targetSection.offsetTop;
-                    const navHeight = document.querySelector('.cabecalho').clientHeight;
-                    window.scrollTo({
-                        top: targetTop - navHeight + 0.5,
-                        behavior: 'smooth'
-                    });
-                } else {
-                    const windowHeight = window.innerHeight;
-                    const sectionHeight = targetSection.clientHeight;
-                    const offset = (windowHeight - sectionHeight) / 2;
-                    const targetTop = targetSection.offsetTop - offset;
-                    window.scrollTo({
-                        top: targetSection.offsetTop - offset,
-                        behavior: 'smooth',
-                    });
-                }
-            }
+const links = document.querySelectorAll('#sectionId');
 
-            if (targetSection) {
-                if (window.innerWidth <= 800 && window.innerHeight <= 400) {
-                    const targetTop = targetSection.offsetTop;
-                    const navHeight = document.querySelector('.cabecalho').clientHeight;
-                    window.scrollTo({
-                        top: targetTop - navHeight + 1,
-                        behavior: 'smooth'
-                    });
-                }
+links.forEach(link => {
+    link.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            if (window.innerWidth <= 768 && targetId === 'about' || targetId === 'skills') {
+                const targetTop = targetSection.offsetTop;
+                const navHeight = document.querySelector('.cabecalho').clientHeight;
+                window.scrollTo({
+                    top: targetTop - navHeight + 0.5,
+                    behavior: 'smooth'
+                });
+            } else {
+                const windowHeight = window.innerHeight;
+                const sectionHeight = targetSection.clientHeight;
+                const offset = (windowHeight - sectionHeight) / 2;
+                const targetTop = targetSection.offsetTop - offset;
+                window.scrollTo({
+                    top: targetSection.offsetTop - offset,
+                    behavior: 'smooth',
+                });
             }
-        });
+        }
+
+        if (targetSection) {
+            if (window.innerWidth <= 800 && window.innerHeight <= 400 || window.innerHeight <= 700) {
+                const targetTop = targetSection.offsetTop;
+                const navHeight = document.querySelector('.cabecalho').clientHeight;
+                window.scrollTo({
+                    top: targetTop - navHeight + 1,
+                    behavior: 'smooth'
+                });
+            }
+        }
     });
-
-    let sections = document.querySelectorAll('section');
-    window.onscroll = () => {
-        sections.forEach(sec => {
-            let top = window.scrollY;
-            let offset = sec.offsetTop - 340;
-            let height = sec.offsetHeight;
-
-            if(top >= offset && top < offset + height) {
-                if (!sec.classList.contains('show.animacao')) {
-                    sec.classList.add('show-animacao');
-
-                    let animacaoAtt = sec.querySelectorAll('.animacao');
-                    animacaoAtt.forEach(span => {
-                        span.remove();
-                    });
-                }
-            }
-            else if (window.innerHeight > 400) {
-                sec.classList.remove('show-animacao');
-            }
-        });
-    }
 });
 
-// menu header
-document.addEventListener('DOMContentLoaded', function () {
-    const menu = document.getElementById('menu');
-    const menuItems = document.querySelectorAll('.cabecalho__navegacao a');
+let sections = document.querySelectorAll('section');
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 340;
+        let height = sec.offsetHeight;
 
-    menuItems.forEach(function (item) {
-        item.addEventListener('click', function () {
-            menu.checked = false;
-        });
+        if (top >= offset && top < offset + height) {
+            if (!sec.classList.contains('show.animacao')) {
+                sec.classList.add('show-animacao');
+
+                let animacaoAtt = sec.querySelectorAll('.animacao');
+                animacaoAtt.forEach(span => {
+                    span.remove();
+                });
+            }
+        } else if (window.innerWidth > 768 && window.innerHeight > 400) {
+            sec.classList.remove('show-animacao');
+        }
+    });
+};
+
+// menu header
+const menu = document.getElementById('menu');
+const menuItems = document.querySelectorAll('.cabecalho__navegacao a');
+
+menuItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+        menu.checked = false;
     });
 });
 
 // carrossel
-document.addEventListener('DOMContentLoaded', function () {
+const projectSwiper = new Swiper('.project__conteudo__container', {
+    loop: true,
+    effect: 'coverflow',
+    grabCursor: false,
+    centeredSlides: true,
+    slidesPerView: 1,
+    coverflowEffect: {
+        rotate: 20,
+        stretch: 0,
+        depth: 400,
+        modifier: 1,
+        slideShadows: true,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
 
-    const projectSwiper = new Swiper('.project__conteudo__container', {
-        loop: true,
-        effect: 'coverflow',
-        grabCursor: false,
-        centeredSlides: true,
-        slidesPerView: 1,
-        coverflowEffect: {
-            rotate: 20,
-            stretch: 0,
-            depth: 400, 
-            modifier: 1,
-            slideShadows: true,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-
-    const certSwiper = new Swiper('.card__container__responsive', {
-        loop: false,
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflowEffect: {
-            rotate: 0,
-            stretch: 0,
-            depth: 250,
-            modifier: 1,
-            slideShadows: true,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-        },
-    });
+const certSwiper = new Swiper('.card__container__responsive', {
+    loop: false,
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 250,
+        modifier: 1,
+        slideShadows: true,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+    },
 });
