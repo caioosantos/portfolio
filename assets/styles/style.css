@@ -162,6 +162,17 @@ section {
     font-weight: 300;
 }
 
+.texto-rodape p a {
+    color: var(--primary-bg-color);
+    font-weight: bold;
+    margin-left: 5px;
+    transition: .5s;
+}
+
+.texto-rodape p a:hover {
+    color: var(--main-color);
+}
+
 .rodape__link a {
     position: relative;
     display: inline-flex;
