@@ -13,7 +13,7 @@
 }
 
 .card__container {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -91,6 +91,12 @@
 
 .card__container__responsive {
     display: none;
+}
+
+@media (max-width: 1600px) {
+    .card__container {
+        width: 100%;
+    }
 }
 
 @media (max-width: 1024px) {
